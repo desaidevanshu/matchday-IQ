@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "backend": "uvicorn main:app --host 127.0.0.1 --port 3001 --reload",
-    "dev:all": "start /b uvicorn main:app --host 127.0.0.1 --port 3001 --reload && vite",
+    "backend": "uvicorn --app-dir ../backend main:app --host 127.0.0.1 --port 3001 --reload",
+    "dev:all": "start /b uvicorn --app-dir ../backend main:app --host 127.0.0.1 --port 3001 --reload && vite",
     "build": "vite build",
     "preview": "vite preview"
   },

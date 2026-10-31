@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.vite
 *.local
 
 # Editor directories and files
@@ -33,5 +34,5 @@ __pycache__
 *.pyc
 *.pkl
 *.joblib
-ml/models/*.joblib
-ml/data/*.csv
+backend/ml/models/*.joblib
+backend/ml/data/*.csv

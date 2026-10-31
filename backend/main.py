@@ -8,6 +8,7 @@ Python ML pipeline (scikit-learn + SHAP LinearExplainer), and Groq LLM (openai/g
 import os
 import re
 import tempfile
+from pathlib import Path
 os.environ.setdefault("MPLCONFIGDIR", os.path.join(tempfile.gettempdir(), "matplotlib_cache"))
 import time
 from typing import Dict, Any, Optional, List
@@ -21,7 +22,8 @@ from ml.features import engineer_features
 from ml.model import predictor
 from ml.live_feed import fetch_live_cricbuzz_matches, fetch_cricbuzz_full_scorecard
 
-load_dotenv(override=True)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(PROJECT_ROOT / ".env", override=True)
 
 app = FastAPI(
     title="MATCHDAY IQ Intelligence API",
@@ -38,7 +40,7 @@ app.add_middleware(
 )
 
 def get_env_keys():
-    load_dotenv(override=True)
+    load_dotenv(PROJECT_ROOT / ".env", override=True)
     cric_key = os.getenv("VITE_CRICAPI_KEY") or os.getenv("CRICAPI_KEY") or ""
     groq_key = os.getenv("VITE_GROQ_API_KEY") or os.getenv("GROQ_API_KEY") or ""
     return cric_key.strip(), groq_key.strip()

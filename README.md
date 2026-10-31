@@ -51,6 +51,12 @@ All ML processing runs in Python:
 
 ## 3. Quickstart & Installation
 
+### Project Structure
+```text
+frontend/  React + Vite application, assets, and npm configuration
+backend/   FastAPI application, ML modules, and Python dependencies
+```
+
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
@@ -58,14 +64,14 @@ All ML processing runs in Python:
 ### 1. Install Dependencies
 ```bash
 # Python dependencies (FastAPI, Scikit-learn, SHAP, Groq, Pandas, Uvicorn)
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 
 # Frontend dependencies
-npm install
+npm --prefix frontend install
 ```
 
 ### 2. Configure Environment
-Create a `.env` file in the root directory (refer to `.env.example`):
+Create a `.env` file in the project root:
 ```env
 # CricAPI / CricketData.org API Key (Optional: fallback demo data is active)
 VITE_CRICAPI_KEY=your_cricapi_key_here
@@ -81,12 +87,13 @@ PORT=3001
 
 **Run Python Backend (FastAPI):**
 ```bash
+cd backend
 python -m uvicorn main:app --host 127.0.0.1 --port 3001 --reload
 ```
 
 **Run Frontend (Vite):**
 ```bash
-npm run dev
+npm --prefix frontend run dev
 ```
 
 Open `http://localhost:5173` in your browser.
