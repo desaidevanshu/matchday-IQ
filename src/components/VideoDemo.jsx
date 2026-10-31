@@ -50,7 +50,7 @@ export default function VideoDemo({ language = 'en' }) {
               display: 'block',
             }}
           >
-            <source src="/matchday iq demo.mp4" type="video/mp4" />
+            <source src="/matchday iq demo1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
