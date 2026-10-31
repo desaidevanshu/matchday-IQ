@@ -32,14 +32,14 @@ export default function Matchmate({ context, language = 'en' }) {
     <div className="fade-in">
       <div className="section-header">
         <div>
-          <div className="section-title">Matchmate — Catch Me Up</div>
+          <div className="section-title">Matchmate - Catch Me Up</div>
           <div className="section-subtitle">Get up to speed in seconds with tactical match briefing</div>
         </div>
       </div>
 
       <div className="card card-elevated" style={{ marginBottom: 16 }}>
         <p style={{ marginBottom: 16, color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-          Just tuned in? Matchmate generates an immediate, context-rich briefing of the current match situation — 
+          Just tuned in? Matchmate generates an immediate, context-rich briefing of the current match situation - 
           what happened, what changed, and what to watch next.
         </p>
 

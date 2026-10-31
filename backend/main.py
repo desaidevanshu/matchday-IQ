@@ -1,5 +1,5 @@
 """
-MATCHDAY IQ — FastAPI Application & Intelligence Layer
+MATCHDAY IQ - FastAPI Application & Intelligence Layer
 Prioritizes LIVE and UPCOMING matches first, followed by RECENT matches.
 Supports OpenCricket API (opencricketapi.com) and CricAPI (api.cricapi.com),
 Python ML pipeline (scikit-learn + SHAP LinearExplainer), and Groq LLM (openai/gpt-oss-120b).
@@ -586,7 +586,8 @@ def call_groq_llm(
     user_prompt: str, 
     cache_key: Optional[str] = None,
     language: str = "en",
-    fallback_generator = None
+    fallback_generator = None,
+    max_tokens: int = 2500
 ) -> Dict[str, Any]:
     full_cache_key = f"{cache_key}:{language}" if cache_key else None
     if full_cache_key:
@@ -637,7 +638,7 @@ def call_groq_llm(
                 {"role": "user", "content": user_prompt}
             ],
             temperature=0.3,
-            max_tokens=900
+            max_tokens=max_tokens
         )
         choice = response.choices[0]
         content = choice.message.content or ""
@@ -1159,9 +1160,9 @@ SHAP FEATURE INFLUENCES: {shap_expl.get('shapValues') if shap_expl else 'N/A'}
 
 Provide the fan's 'Catch Me Up' briefing."""
 
-    cache_key = f"matchmate:{match_data.get('name')}:{match_data.get('status')}"
+    cache_key = f"matchmate-v2:{match_data.get('name')}:{match_data.get('status')}"
     fallback = lambda: generate_fallback_matchmate(match_data, features, win_prob, language)
-    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback)
+    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback, max_tokens=1500)
     return {"recap": res["content"], "model": res.get("model"), "isDemo": res.get("isDemo")}
 
 @app.post("/api/overthink")
@@ -1179,6 +1180,8 @@ def post_overthink(payload: Dict[str, Any] = Body(...)):
         "- Answer the specific fan question directly.\n"
         "- Label FACTS, ML MODEL PREDICTIONS, and SHAP FEATURE ATTRIBUTIONS distinctly.\n"
         "- Never hallucinate cricket events or invent unprovided stats.\n"
+        "- When providing tables or lists, always finish them completely with all rows.\n"
+        "- Complete your full thoughts; never stop abruptly or truncate explanations.\n"
         "- Keep response crisp, structured, and engaging."
     )
 
@@ -1189,11 +1192,11 @@ SITUATION: {features.get('currentSituation')}
 WIN PROBABILITY: {win_prob}
 SHAP EXPLANATION: {shap_expl}
 
-Provide a deep analytical decode."""
+Provide a deep analytical decode with complete explanation and finished tables."""
 
-    cache_key = f"overthink:{question}:{match_data.get('name')}"
+    cache_key = f"overthink-v2:{question}:{match_data.get('name')}"
     fallback = lambda: generate_fallback_overthink(question, match_data, features, win_prob, shap_expl, language)
-    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback)
+    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback, max_tokens=2500)
     return {"analysis": res["content"], "model": res.get("model"), "isDemo": res.get("isDemo")}
 
 @app.post("/api/tactical")
@@ -1223,7 +1226,9 @@ def post_tactical(payload: Dict[str, Any] = Body(...)):
         "- Surface conditions, boundary size, bowler repertoire, current wickets & overs.\n"
         "\n"
         "### 4. CAPTAIN'S RECOMMENDATION\n"
-        "- Decisive tactical verdict with specific field setting advice."
+        "- Give a decisive tactical verdict and up to three concrete field-setting bullets.\n"
+        "Keep sections 1 and 2 to two concise table rows each and section 3 to one sentence. "
+        "Use complete sentences and finish all four sections; never stop mid-sentence."
     )
 
     user_prompt = f"""TACTICAL SCENARIO: {scenario}
@@ -1233,7 +1238,7 @@ SITUATION: {features.get('currentSituation')}
 
 Analyze this strategic dilemma."""
 
-    cache_key = f"tactical:{scenario}:{match_data.get('name')}"
+    cache_key = f"tactical-v2:{scenario}:{match_data.get('name')}"
     fallback = lambda: f"""### 1. ADVANTAGES
 | Option | What it Buys You on the Field |
 |---|---|
@@ -1252,7 +1257,14 @@ Analyze this strategic dilemma."""
 ### 4. CAPTAIN'S RECOMMENDATION
 - Bowl wide of off-stump with deep backward point and long-off in place, taking the leg-side boundary completely out of play."""
 
-    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback)
+    res = call_groq_llm(
+        system_prompt,
+        user_prompt,
+        cache_key=cache_key,
+        language=language,
+        fallback_generator=fallback,
+        max_tokens=1600
+    )
     return {
         "analysis": res["content"],
         "scenario": scenario,
@@ -1293,9 +1305,9 @@ SCORECARD DATA: {scorecard}
 
 Generate the comprehensive Match Intelligence Report."""
 
-    cache_key = f"report:{match_data.get('name')}:{match_data.get('status')}"
+    cache_key = f"report-v2:{match_data.get('name')}:{match_data.get('status')}"
     fallback = lambda: generate_fallback_report(match_data, features, win_prob, shap_expl, scorecard, language)
-    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback)
+    res = call_groq_llm(system_prompt, user_prompt, cache_key=cache_key, language=language, fallback_generator=fallback, max_tokens=3500)
     return {"report": res["content"], "model": res.get("model"), "isDemo": res.get("isDemo")}
 
 @app.post("/api/simulate")

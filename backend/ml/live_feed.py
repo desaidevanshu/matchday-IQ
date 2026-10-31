@@ -1,5 +1,5 @@
 """
-MATCHDAY IQ — Live Cricket Data Engine
+MATCHDAY IQ - Live Cricket Data Engine
 Fetches real-time ongoing matches, live scorecards, and commentary directly from live feeds (Cricbuzz mcenter & OpenCricket).
 """
 

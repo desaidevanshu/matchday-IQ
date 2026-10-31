@@ -1,5 +1,5 @@
 """
-MATCHDAY IQ — Machine Learning & SHAP Explainability Engine
+MATCHDAY IQ - Machine Learning & SHAP Explainability Engine
 Trained predictive model for cricket chase win probability with authentic SHAP feature attributions.
 """
 

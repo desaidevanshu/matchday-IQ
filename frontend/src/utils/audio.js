@@ -1,5 +1,5 @@
 /**
- * MATCHDAY IQ — Web Audio Synthesizer for Stadium Atmosphere
+ * MATCHDAY IQ - Web Audio Synthesizer for Stadium Atmosphere
  * Generates dynamic cricket crowd cheers, wicket sirens, and gasps using Web Audio oscillators.
  * 100% standalone, zero network requests, instant playback.
  */

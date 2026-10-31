@@ -67,7 +67,7 @@ export default function Overthink({ context, language = 'en' }) {
       {/* Header */}
       <div className="section-header">
         <div>
-          <div className="section-title">Overthink — Decode the Match</div>
+          <div className="section-title">Overthink - Decode the Match</div>
           <div className="section-subtitle">Deep tactical engine backed by authentic match statistics & ML models</div>
         </div>
       </div>

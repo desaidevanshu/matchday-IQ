@@ -1,5 +1,5 @@
 /**
- * MATCHDAY IQ — Neo-Brutalist Markdown & Table Renderer
+ * MATCHDAY IQ - Neo-Brutalist Markdown & Table Renderer
  * Accurately parses markdown headers (including emoji headers), comparison tables,
  * multi-line bullet cells, callouts, metric badges, dividers, and lists into structured HTML.
  */

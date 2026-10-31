@@ -1,5 +1,5 @@
 """
-MATCHDAY IQ — Feature Engineering & Data Pipeline
+MATCHDAY IQ - Feature Engineering & Data Pipeline
 Normalizes cricket match data and derives deterministic cricket metrics.
 """
 

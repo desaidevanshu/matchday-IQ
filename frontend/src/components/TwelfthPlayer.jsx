@@ -68,7 +68,7 @@ export default function TwelfthPlayer({ context, language = 'en' }) {
     <div className="fade-in">
       <div className="section-header">
         <div>
-          <div className="section-title">12th Player — Captain's Challenge</div>
+          <div className="section-title">12th Player - Captain's Challenge</div>
           <div className="section-subtitle">Qualitative Scenario Analysis & Tactical Trade-offs</div>
         </div>
       </div>

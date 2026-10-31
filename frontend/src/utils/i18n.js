@@ -1,5 +1,5 @@
 /**
- * MATCHDAY IQ — Multilingual Internationalization (i18n) Engine
+ * MATCHDAY IQ - Multilingual Internationalization (i18n) Engine
  * Supported Languages: English (en), हिन्दी (hi), தமிழ் (ta), తెలుగు (te), বাংলা (bn), اردو (ur)
  */
 
@@ -17,11 +17,11 @@ export const TRANSLATIONS = {
     // Header & Brand
     app_title: 'MATCHDAY IQ',
     tagline: 'Watch. Understand. Make the Call.',
-    hero_label: '— CRICKET, IN CONTEXT',
+    hero_label: '- CRICKET, IN CONTEXT',
     hero_heading_1: 'Read the game.',
     hero_heading_2: 'Not just the score.',
     hero_subtitle: 'Match context and tactical insight, grounded in live fixture data, ML win probability, and SHAP explainability.',
-    demo_banner: '⚠ Demo Mode — Showing sample data. Add API keys to .env for live data.',
+    demo_banner: '⚠ Demo Mode - Showing sample data. Add API keys to .env for live data.',
     theme_light: 'Light Mode',
     theme_dark: 'Dark Mode',
     audio_sound: 'Stadium Sound',
@@ -76,7 +76,7 @@ export const TRANSLATIONS = {
     q_custom_placeholder: 'Ask anything about the tactical situation...',
 
     // Fan Dugout & Simulator
-    dugout_title: '🎮 Fan Dugout — Live Stadium Arena',
+    dugout_title: '🎮 Fan Dugout - Live Stadium Arena',
     dugout_subtitle: 'Play along, predict over-by-over, and simulate live match-turning tactical scenarios.',
     dugout_fan_pulse: 'Live Fan Pulse (Next Over)',
     dugout_predict_prompt: 'What happens in the upcoming over?',
@@ -115,11 +115,11 @@ export const TRANSLATIONS = {
   hi: {
     app_title: 'मैचडे IQ',
     tagline: 'देखें। समझें। सही फैसला लें।',
-    hero_label: '— क्रिकेट, पूरे संदर्भ में',
+    hero_label: '- क्रिकेट, पूरे संदर्भ में',
     hero_heading_1: 'खेल को समझें।',
     hero_heading_2: 'सिर्फ स्कोर नहीं।',
     hero_subtitle: 'मैच का संदर्भ, रणनीतिक विश्लेषण, एमएल जीत की संभावना और SHAP व्याख्या।',
-    demo_banner: '⚠ डेमो मोड — नमूना डेटा प्रदर्शित। लाइव डेटा के लिए .env में API कुंजी जोड़ें।',
+    demo_banner: '⚠ डेमो मोड - नमूना डेटा प्रदर्शित। लाइव डेटा के लिए .env में API कुंजी जोड़ें।',
     theme_light: 'लाइट मोड',
     theme_dark: 'डार्क मोड',
     audio_sound: 'स्टेडियम ध्वनि',
@@ -168,7 +168,7 @@ export const TRANSLATIONS = {
     q_dot_balls_threat: 'यदि अब 3 डॉट गेंदें आती हैं तो क्या होगा?',
     q_custom_placeholder: 'रणनीतिक स्थिति के बारे में कुछ भी पूछें...',
 
-    dugout_title: '🎮 फैन डगआउट — लाइव स्टेडियम अखाड़ा',
+    dugout_title: '🎮 फैन डगआउट - लाइव स्टेडियम अखाड़ा',
     dugout_subtitle: 'साथ खेलें, ओवर-दर-ओवर भविष्यवाणी करें और लाइव मैच पलटने वाले परिदृश्यों का अनुकरण करें।',
     dugout_fan_pulse: 'लाइव फैन पल्स (अगला ओवर)',
     dugout_predict_prompt: 'अगले ओवर में क्या होगा?',
@@ -206,11 +206,11 @@ export const TRANSLATIONS = {
   ta: {
     app_title: 'மேட்ச்டே IQ',
     tagline: 'பாருங்கள். புரிந்துகொள்ளுங்கள். முடிவெடுங்கள்.',
-    hero_label: '— கிரிக்கெட், முழு சூழலுடன்',
+    hero_label: '- கிரிக்கெட், முழு சூழலுடன்',
     hero_heading_1: 'ஆட்டத்தைப் படியுங்கள்.',
     hero_heading_2: 'வெறும் ஸ்கோரை அல்ல.',
     hero_subtitle: 'லைவ் போட்டித் தரவு, எம்எல் வெற்றி வாய்ப்பு மற்றும் SHAP விளக்கங்களுடன் கூடிய உத்தி பகுப்பாய்வு.',
-    demo_banner: '⚠ டெமோ பயன்முறை — மாதிரி தரவு காட்டப்படுகிறது.',
+    demo_banner: '⚠ டெமோ பயன்முறை - மாதிரி தரவு காட்டப்படுகிறது.',
     theme_light: 'லைட் மோட்',
     theme_dark: 'டார்க் மோட்',
     audio_sound: 'மைதான ஒலி',
@@ -259,7 +259,7 @@ export const TRANSLATIONS = {
     q_dot_balls_threat: 'இப்போது 3 டாட் பந்துகள் வந்தால் என்னவாகும்?',
     q_custom_placeholder: 'உத்தி நிலை குறித்து கேளுங்கள்...',
 
-    dugout_title: '🎮 ஃபேன் டக்அவுட் — லைவ் மைதான களம்',
+    dugout_title: '🎮 ஃபேன் டக்அவுட் - லைவ் மைதான களம்',
     dugout_subtitle: 'ஓவர் கணிப்புகள் செய்து, என்ன நடக்கும் என்பதை சிமுலேட் செய்யுங்கள்.',
     dugout_fan_pulse: 'ரசிகர் கணிப்பு (அடுத்த ஓவர்)',
     dugout_predict_prompt: 'அடுத்த ஓவரில் என்ன நடக்கும்?',
@@ -295,11 +295,11 @@ export const TRANSLATIONS = {
   te: {
     app_title: 'మ్యాచ్‌డే IQ',
     tagline: 'చూడండి. అర్థం చేసుకోండి. సరైన నిర్ణయం తీసుకోండి.',
-    hero_label: '— క్రికెట్, పూర్తి సందర్భంలో',
+    hero_label: '- క్రికెట్, పూర్తి సందర్భంలో',
     hero_heading_1: 'ఆటను చదవండి.',
     hero_heading_2: 'స్కోర్ మాత్రమే కాదు.',
     hero_subtitle: 'లైవ్ మ్యాచ్ డేటా, ML గెలుపు సంభావ్యత మరియు SHAP వివరణలతో కూడిన వ్యూహాత్మక విశ్లేషణ.',
-    demo_banner: '⚠ డెమో మోడ్ — నమూనా డేటా చూపబడుతోంది.',
+    demo_banner: '⚠ డెమో మోడ్ - నమూనా డేటా చూపబడుతోంది.',
     theme_light: 'లైట్ మోడ్',
     theme_dark: 'డార్క్ మోడ్',
     audio_sound: 'స్టేడియం సౌండ్',
@@ -348,7 +348,7 @@ export const TRANSLATIONS = {
     q_dot_balls_threat: 'ఇప్పుడు 3 డాట్ బంతులు పడితే ఏం జరుగుతుంది?',
     q_custom_placeholder: 'వ్యూహాత్మక పరిస్థితిపై ఏదైనా అడగండి...',
 
-    dugout_title: '🎮 ఫ్యాన్ డగౌట్ — లైవ్ స్టేడియం అరేనా',
+    dugout_title: '🎮 ఫ్యాన్ డగౌట్ - లైవ్ స్టేడియం అరేనా',
     dugout_subtitle: 'మ్యాచ్‌ను ఊహించండి, ఓవర్ ప్రిడిక్షన్ చేయండి మరియు ఫలితాలను సిమ్యులేట్ చేయండి.',
     dugout_fan_pulse: 'ఫ్యాన్ పల్స్ (తదుపరి ఓవర్)',
     dugout_predict_prompt: 'తదుపరి ఓవర్‌లో ఏం జరుగుతుంది?',
@@ -384,11 +384,11 @@ export const TRANSLATIONS = {
   bn: {
     app_title: 'ম্যাচডে IQ',
     tagline: 'দেখুন। বুঝুন। সঠিক সিদ্ধান্ত নিন।',
-    hero_label: '— ক্রিকেট, পুরো প্রেক্ষাপটে',
+    hero_label: '- ক্রিকেট, পুরো প্রেক্ষাপটে',
     hero_heading_1: 'খেলাটি পড়ুন।',
     hero_heading_2: 'শুধু স্কোর নয়।',
     hero_subtitle: 'লাইভ ম্যাচের প্রেক্ষাপট, কৌশলগত বিশ্লেষণ, এমএল জয়ের সম্ভাবনা ও ব্যাখ্যা।',
-    demo_banner: '⚠ ডেমো মোড — নমুনা ডেটা দেখানো হচ্ছে।',
+    demo_banner: '⚠ ডেমো মোড - নমুনা ডেটা দেখানো হচ্ছে।',
     theme_light: 'লাইট মোড',
     theme_dark: 'ডার্ক মোড',
     audio_sound: 'স্টেডিয়াম সাউন্ড',
@@ -437,7 +437,7 @@ export const TRANSLATIONS = {
     q_dot_balls_threat: 'এখন ৩টি ডট বল হলে কী ঘটবে?',
     q_custom_placeholder: 'কৌশলগত পরিস্থিতি সম্পর্কে কিছু জিজ্ঞাসা করুন...',
 
-    dugout_title: '🎮 ফ্যান ডাগআউট — লাইভ স্টেডিয়াম এরিনা',
+    dugout_title: '🎮 ফ্যান ডাগআউট - লাইভ স্টেডিয়াম এরিনা',
     dugout_subtitle: 'ম্যাচ অনুমান করুন, ওভার প্রেডিকশন করুন এবং লাইভ দৃশ্যপট সিমুলেট করুন।',
     dugout_fan_pulse: 'ফ্যান পালস (পরবর্তী ওভার)',
     dugout_predict_prompt: 'পরবর্তী ওভারে কী ঘটতে পারে?',
@@ -473,11 +473,11 @@ export const TRANSLATIONS = {
   ur: {
     app_title: 'میچ ڈے IQ',
     tagline: 'دیکھیں۔ سمجھیں۔ صحیح فیصلہ کریں۔',
-    hero_label: '— کرکٹ، مکمل تناظر میں',
+    hero_label: '- کرکٹ، مکمل تناظر میں',
     hero_heading_1: 'کھیل کو پڑھیں۔',
     hero_heading_2: 'صرف اسکور نہیں۔',
     hero_subtitle: 'لائیو میچ کا تناظر، حکمت عملی کا تجزیہ، ایم ایل جیت کے امکانات اور مستند تفصیلات۔',
-    demo_banner: '⚠ ڈیمو موڈ — نمونہ ڈیٹا دکھایا جا رہا ہے۔',
+    demo_banner: '⚠ ڈیمو موڈ - نمونہ ڈیٹا دکھایا جا رہا ہے۔',
     theme_light: 'لائٹ موڈ',
     theme_dark: 'ڈارک موڈ',
     audio_sound: 'اسٹیڈیم آواز',
@@ -526,7 +526,7 @@ export const TRANSLATIONS = {
     q_dot_balls_threat: 'اگر اب 3 ڈاٹ گیندیں آ جائیں تو کیا ہوگا؟',
     q_custom_placeholder: 'حکمت عملی کے بارے میں کچھ بھی پوچھیں...',
 
-    dugout_title: '🎮 فین ڈگ آؤٹ — لائیو اسٹیڈیم ایرینا',
+    dugout_title: '🎮 فین ڈگ آؤٹ - لائیو اسٹیڈیم ایرینا',
     dugout_subtitle: 'ساتھ کھیلیں، اوور کی پیش گوئی کریں اور لائیو میچ کے حالات کا تخمینہ لگائیں۔',
     dugout_fan_pulse: 'فین نبض (اگلا اوور)',
     dugout_predict_prompt: 'اگلے اوور میں کیا ہوگا؟',
