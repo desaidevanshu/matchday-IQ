@@ -271,6 +271,8 @@ export default function App() {
           </div>
         )}
       </main>
+
+      <footer className="app-footer">Made with love by Devanshu Desai</footer>
     </div>
   );
 }

@@ -194,8 +194,15 @@ body {
 /* ═══ Layout ═══ */
 .app-container {
   max-width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container > main {
+  flex: 1;
 }
 
 /* ═══ Header ═══ */
@@ -3002,4 +3009,13 @@ body {
 
 [data-theme="light"] .chart-container summary {
   color: #111;
+}
+.app-footer {
+  margin-top: var(--space-xl);
+  padding: var(--space-md) 0 var(--space-sm);
+  border-top: var(--border-thin);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-align: center;
 }
