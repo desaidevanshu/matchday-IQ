@@ -79,9 +79,14 @@ VITE_CRICAPI_KEY=your_cricapi_key_here
 # Groq API Key for Llama 3.3 70B LLM (Optional: fallback explanations active)
 VITE_GROQ_API_KEY=your_groq_api_key_here
 
+# Backend API URL (optional; production defaults to the deployed MATCHDAY IQ backend)
+VITE_API_BASE_URL=https://matchday-iq-dckp.vercel.app/api
+
 # Server Port
 PORT=3001
 ```
+
+For Vercel deployments, set `VITE_API_BASE_URL` to the backend URL ending in `/api` in the frontend project's environment variables, then redeploy.
 
 ### 3. Run the Application
 
